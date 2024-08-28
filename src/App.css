@@ -1,38 +1,197 @@
-.App {
+:root {
+  --background-color1: #01204E;
+  --background-color2: #556386;
+  --bakground-color3: #FEAE6F;
+  --background-color4: #3d4753;
+  --text-color: aliceblue; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  color:var(--text-color);
+  font-size: 1.8rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--bakground-color3);
+  padding: 20px 0;
+  z-index: 1;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  font-size: 2.2rem;
+}
+
+main {
+  position: relative;
+  top: 62px;
+}
+
+
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      50deg,
+      #515d6c,
+      #22334e 40%,
+      var(--background-color1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+}
+
+.welcome-title, .contact-title {
+  font-size: 5rem;
+}
+
+#welcome-section p {
+  color: var(--bakground-color3);
+  font-size: 2.2rem;
+  font-style: italic;
+}
+
+.projects-section {
+  width: 100%;
+  background-color: var(--background-color2);
+  text-align: center;
+  padding: 9rem 0;
+}
+
+.project-tile {
+  font-size: 4rem;
+  max-width: 680px;
+  margin: 2rem auto 6rem auto;
+  border-bottom: 2px solid var(--text-color);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 4rem 4rem;
+  width: 80%;
+  max-width: 1280px;
+  margin: 2rem auto 4rem auto;
+}
+
+.project {
+  background-color: #3d4753;
+  padding: 20px auto;
+  border-radius: 4px;
+}
+
+.project-image {
+  height: calc(100% - 5rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  margin: 0.7rem auto 0 auto;
+}
+
+.code {
+  font-size: 1.5rem;
+  color: var(--background-color4);
+  transition: color 0.5s ease-in-out;
+  margin: 0 1rem;
+}
+
+.project:hover .code {
+  color: var(--bakground-color3);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--background-color4);
+  padding: 2rem;
+  margin-top: 4rem;
+  border: 1px solid white;
+  border-radius: 2px;
+  font-size: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn:hover {
+  background-color: var(--bakground-color3);
+  color: var(--background-color1);
+}
+
+.contact-section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      130deg,
+      #515d6c,
+      #22334e 40%,
+      var(--background-color1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contact-subtitle {
+  margin: 1.5rem auto 2rem auto;
+  font-size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contact-grid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 3rem;
+  font-size: 2.5rem;
+  transition: transform 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+i {
+  margin-right: -1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.contact-details:hover {
+  transform: translateY(0.5rem);
+}
+
+
+@media (max-width: 768px) {
+  .projects-grid {
+      grid-template-columns: 1fr;
   }
 }
