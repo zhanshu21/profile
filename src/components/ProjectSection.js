@@ -8,22 +8,22 @@ const ProjectsSection = () => {
   const projects = [
     {
       link: "https://zhanshu21.github.io/clock/",
-      imgSrc: "/clock.png",
+      imgSrc: "profile/clock.png",
       title: "Pomodoro Clock",
     },
     {
       link: "https://zhanshu21.github.io/drum-maschine/",
-      imgSrc: "/drum.png",
+      imgSrc: "profile/drum.png",
       title: "Drum Maschine",
     },
     {
       link: "https://zhanshu21.github.io/calculator/",
-      imgSrc: "/calculator.png",
+      imgSrc: "profile/calculator.png",
       title: "Calculator",
     },
     {
       link: "https://zhanshu21.github.io/random-quote-generator/",
-      imgSrc: "/quote.png",
+      imgSrc: "profile/quote.png",
       title: "Random Quote",
     },
   ];
