@@ -44,7 +44,7 @@ const ProjectsSection = () => {
         rel="noreferrer"
       >
         View Certification
-        <FontAwesomeIcon icon={faAnglesRight} />
+        <FontAwesomeIcon icon={faAnglesRight} className="arrow" />
       </a>
     </section>
   );

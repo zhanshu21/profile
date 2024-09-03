@@ -8,7 +8,7 @@ export const Link = ({ link, icon,  title}) => {
       className="contact-details"
       rel="noreferrer"
     >
-      <FontAwesomeIcon icon={icon} /> {title}
+      <FontAwesomeIcon icon={icon} className="social-media" /> {title}
     </a>
   );
 };
