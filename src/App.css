@@ -52,7 +52,7 @@ nav ul{
 }
 
 .nav-text:hover {
-  color: var(--background-color4);
+  color: var(--background-color1);
   text-decoration: underline;
 }
 
@@ -197,6 +197,7 @@ h1 {
 
 .contact-details {
   margin-top: 1rem;
+  color: rgb(239, 215, 183);
 }
 
 .contact-details:hover {
